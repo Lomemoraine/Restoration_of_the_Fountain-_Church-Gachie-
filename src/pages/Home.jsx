@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-cross">✝</div>
-        <h1>Welcome to Grace Community Church</h1>
+        <h1>Welcome to Restoration of the Fountain</h1>
         <p>A place of worship, fellowship, and spiritual growth. Everyone is welcome here.</p>
         <p className="hero-verse">"For where two or three gather in my name, there am I with them." — Matthew 18:20</p>
         <div className="hero-btns">
