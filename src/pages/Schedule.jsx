@@ -1,13 +1,12 @@
 const services = [
-  { day: 'Sunday', time: '7:00 AM', name: 'Early Morning Service', location: 'Main Sanctuary', type: 'Worship' },
-  { day: 'Sunday', time: '9:00 AM', name: 'Main Morning Service', location: 'Main Sanctuary', type: 'Worship' },
-  { day: 'Sunday', time: '11:00 AM', name: 'Second Morning Service', location: 'Main Sanctuary', type: 'Worship' },
-  { day: 'Sunday', time: '2:00 PM', name: 'Youth Service', location: 'Youth Hall', type: 'Youth' },
-  { day: 'Wednesday', time: '6:30 PM', name: 'Midweek Bible Study', location: 'Fellowship Hall', type: 'Study' },
-  { day: 'Friday', time: '6:00 AM', name: 'Morning Prayer', location: 'Prayer Room', type: 'Prayer' },
-  { day: 'Friday', time: '7:00 PM', name: 'Young Adults Fellowship', location: 'Youth Hall', type: 'Youth' },
-  { day: 'Saturday', time: '9:00 AM', name: 'Children\'s Ministry', location: 'Children\'s Wing', type: 'Children' },
-  { day: 'Saturday', time: '3:00 PM', name: 'Choir Rehearsal', location: 'Main Sanctuary', type: 'Music' },
+  { day: 'Sunday', time: '9:00 AM - 10:00 AM', name: 'Morning Service', location: 'Main Hall', type: 'Worship' },
+  { day: 'Sunday', time: '10:00 AM - 11:00 AM', name: 'Bible study', location: 'Main Hall', type: 'Worship' },
+  { day: 'Sunday', time: '11:00 AM - 12:30 PM', name: 'Preaching', location: 'Main Hall', type: 'Youth' },
+  { day: 'Sunday', time: '12:30 PM - 1:30 PM', name: 'Prayer', location: 'Main Hall', type: 'Study' },
+  { day: 'Monday', time: '10:00 AM - 4:00 PM', name: 'Prayer and Fasting', location: 'Main Hall', type: 'Prayer' },
+  { day: 'Tuesday', time: '10:00 PM - 4:00 PM', name: 'Men\'s Fellowship', location: 'Main Hall', type: 'Youth' },
+  { day: 'Wednesday', time: '10:00 PM - 4:00 PM', name: 'Women\'s Fellowship', location: 'Children\'s Wing', type: 'Children' },
+  { day: 'Saturday', time: '4:00 PM - 6:00 PM', name: 'Praise & Worship team', location: 'Main Hall', type: 'Music' },
 ];
 
 const badgeColors = {
