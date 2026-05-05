@@ -1,5 +1,26 @@
 import { Link } from 'react-router-dom';
 
+const latestAnnouncements = [
+  {
+    category: 'Event',
+    title: 'Annual Church Thanksgiving',
+    date: 'Sunday, May 4, 2026',
+    categoryColor: { bg: '#e8f0fe', text: '#1e4db7' },
+  },
+  {
+    category: 'Youth',
+    title: 'Youth Camp Registration Open',
+    date: 'Sunday, May 4, 2026',
+    categoryColor: { bg: '#e0f0ff', text: '#3a86ff' },
+  },
+  {
+    category: 'Discipleship',
+    title: 'New Members Class',
+    date: 'Sunday, April 27, 2026',
+    categoryColor: { bg: '#f0e8ff', text: '#6c63ff' },
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -44,7 +65,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Announcements Preview */}
       <section style={{ background: 'var(--white)' }}>
+        <div className="section-title">
+          <h2>📢 Latest Announcements</h2>
+          <p>From this past Sunday</p>
+          <div className="divider" />
+        </div>
+        <div style={{ maxWidth: '700px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {latestAnnouncements.map((a, i) => (
+            <div key={i} className="announcement-card">
+              <div className="announcement-header">
+                <span className="announcement-badge" style={{ background: a.categoryColor.bg, color: a.categoryColor.text }}>
+                  {a.category}
+                </span>
+                <span className="announcement-date">{a.date}</span>
+              </div>
+              <h3 className="announcement-title">{a.title}</h3>
+            </div>
+          ))}
+          <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+            <Link to="/announcements" className="btn-primary" style={{ background: 'var(--blue-mid)', color: 'var(--white)' }}>
+              View All Announcements
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: 'var(--gray)' }}>
         <div className="section-title">
           <h2>Our Mission</h2>
           <div className="divider" />

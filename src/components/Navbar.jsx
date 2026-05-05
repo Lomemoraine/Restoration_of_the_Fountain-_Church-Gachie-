@@ -27,6 +27,7 @@ export default function Navbar() {
         <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>Home</NavLink></li>
         <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>About Us</NavLink></li>
         <li><NavLink to="/schedule" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>Schedule</NavLink></li>
+        <li><NavLink to="/announcements" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>Announcements</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''} onClick={closeMenu}>Contact Us</NavLink></li>
       </ul>
     </nav>

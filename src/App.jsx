@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
+import Announcements from './pages/Announcements';
 import './index.css';
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/announcements" element={<Announcements />} />
         </Routes>
       </main>
       <Footer />

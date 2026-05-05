@@ -367,6 +367,63 @@ footer strong { color: var(--white); }
 
 .map-link:hover { background: var(--blue-dark); }
 
+/* ANNOUNCEMENTS */
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.announcement-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(10,36,99,0.07);
+  border-left: 4px solid var(--blue-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.announcement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(10,36,99,0.12);
+}
+
+.announcement-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.announcement-badge {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.announcement-date {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.announcement-title {
+  color: var(--blue-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-body {
+  color: var(--text-light);
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
 /* HAMBURGER BUTTON */
 .nav-hamburger {
   display: none;
