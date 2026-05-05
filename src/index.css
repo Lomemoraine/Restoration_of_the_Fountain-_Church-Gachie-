@@ -367,7 +367,74 @@ footer strong { color: var(--white); }
 
 .map-link:hover { background: var(--blue-dark); }
 
+/* HAMBURGER BUTTON */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  z-index: 200;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Animate to X when open */
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 @media (max-width: 768px) {
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
+
+  .nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--blue-dark);
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 0.25rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .nav-links.nav-open { display: flex; }
+
+  .nav-links a {
+    display: block;
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Schedule table — scroll on small screens */
+  .schedule-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(10,36,99,0.08);
+    margin-bottom: 2rem;
+  }
+
+  .schedule-table {
+    min-width: 560px;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  .page-content { padding: 2.5rem 1rem; }
+  .page-hero h1 { font-size: 1.8rem; }
 }

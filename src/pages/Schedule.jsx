@@ -41,32 +41,34 @@ export default function Schedule() {
           <div className="divider" />
         </div>
 
-        <table className="schedule-table">
-          <thead>
-            <tr>
-              <th>Day</th>
-              <th>Time</th>
-              <th>Service</th>
-              <th>Location</th>
-              <th>Type</th>
-            </tr>
-          </thead>
-          <tbody>
-            {services.map((s, i) => (
-              <tr key={i}>
-                <td><strong>{s.day}</strong></td>
-                <td>{s.time}</td>
-                <td>{s.name}</td>
-                <td>{s.location}</td>
-                <td>
-                  <span className="badge" style={{ background: badgeColors[s.type] + '22', color: badgeColors[s.type] }}>
-                    {s.type}
-                  </span>
-                </td>
+        <div className="schedule-table-wrapper">
+          <table className="schedule-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Service</th>
+                <th>Location</th>
+                <th>Type</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {services.map((s, i) => (
+                <tr key={i}>
+                  <td><strong>{s.day}</strong></td>
+                  <td>{s.time}</td>
+                  <td>{s.name}</td>
+                  <td>{s.location}</td>
+                  <td>
+                    <span className="badge" style={{ background: badgeColors[s.type] + '22', color: badgeColors[s.type] }}>
+                      {s.type}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <div className="section-title" style={{ marginTop: '4rem' }}>
           <h2>Small Groups</h2>
